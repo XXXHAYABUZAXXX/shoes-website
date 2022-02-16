@@ -1,0 +1,99 @@
+.product {
+  background: radial-gradient(
+    var(--limegreen, limegreen),
+    var(--purple, purple)
+  );
+  border-radius: 1em;
+  padding: 3em;
+  margin-bottom: 5em;
+  text-align: center;
+
+  &:first-of-type &__img {
+    shape-outside: url(../image/shoe-1.png);
+    shape-margin: 1em;
+  }
+
+  &:nth-of-type(2) {
+    //  @responsive
+    @media (min-width: 45em) {
+      text-align: right;
+    }
+
+    h3 {
+      //  @responsive
+      @media (min-width: 45em) {
+        width: 80%;
+        margin-left: auto;
+      }
+    }
+
+    .product__img {
+      shape-outside: url(../image/shoe-2.png);
+      shape-margin: 1em;
+
+      // responsive
+      @media (min-width: 45em) {
+        float: left;
+        margin: 0 0 0 -5em;
+      }
+    }
+  }
+
+  &:last-of-type &__img {
+    shape-outside: url(../image/shoe-3.png);
+    shape-margin: 1em;
+  }
+
+  // responsive
+  @media (min-width: 45em) {
+    text-align: left;
+    // margin-bottom: 9em;
+  }
+
+  &__title {
+    color: $white;
+    font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
+    text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    line-height: 1;
+
+    // responsive
+    @media (min-width: 45em) {
+      margin-top: 0;
+    }
+  }
+
+  &__img {
+    margin: -5em 0 0 0;
+
+    // responsive
+    @media (min-width: 45em) {
+      float: right;
+      width: 65%;
+      margin: 0 -5em 0 0;
+    }
+
+    // responsive
+    @media (min-width: 56.25em) {
+      width: 40%;
+    }
+  }
+}
+
+.shoe-red {
+  --limegreen: #faa700; //background
+  --purple: #e48d00; //background
+  --blue: #a1173c; //button
+}
+
+.shoe-white {
+  --limegreen: #fce4b3; //background
+  --purple: #eac886; //background
+  --blue: #2f4858; //button
+}
+
+.shoe-blue {
+  --limegreen: #6dd5ed; //background
+  --purple: #2193b0; //background
+  --blue: #008951; //button
+}

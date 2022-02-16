@@ -1,0 +1,22 @@
+.hero {
+  background: #222;
+  color: $white;
+  text-align: center;
+  padding: 15em 0;
+  --blue: #faa700; //button
+
+  @supports (background-blend-mode: multiply) {
+    background: url(/image/shoe-3.png), radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+  }
+}
+
+.primary-title {
+  font-size: 4rem;
+  font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+  text-transform: uppercase;
+  line-height: 1;
+}
